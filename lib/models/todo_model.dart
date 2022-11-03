@@ -46,7 +46,8 @@ class ToDoModel {
 
   String toJson() => json.encode(toMap());
 
-  factory ToDoModel.fromJson(String source) => ToDoModel.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory ToDoModel.fromJson(String source) =>
+      ToDoModel.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() {
@@ -56,19 +57,18 @@ class ToDoModel {
   @override
   bool operator ==(covariant ToDoModel other) {
     if (identical(this, other)) return true;
-  
-    return 
-      other.id == id &&
-      other.title == title &&
-      other.description == description &&
-      other.status == status;
+
+    return other.id == id &&
+        other.title == title &&
+        other.description == description &&
+        other.status == status;
   }
 
   @override
   int get hashCode {
     return id.hashCode ^
-      title.hashCode ^
-      description.hashCode ^
-      status.hashCode;
+        title.hashCode ^
+        description.hashCode ^
+        status.hashCode;
   }
 }
