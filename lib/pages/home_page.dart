@@ -17,26 +17,42 @@ class HomePage extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                print(ToDoController().findAll());
-              },
-              child: Text(
-                'GET ALL',
-              ),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                print(ToDoController().findById('636a6ebb75250203e82f4b08'));
-              },
-              child: Text(
-                'GET ID',
-              ),
-            ),
-            ElevatedButton(
-              onPressed: () {
                 print(ToDoController().create());
               },
-              child: Text(
-                'POST',
+              child: const Text(
+                'CREATE',
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                print(ToDoController().get());
+              },
+              child: const Text(
+                'READ (ALL)',
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                print(ToDoController().getById('636a719875250203e82f4b0f'));
+              },
+              child: const Text(
+                'READ (BY ID)',
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                print(ToDoController().update());
+              },
+              child: const Text(
+                'UPDATE',
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                print(ToDoController().delete('636a719875250203e82f4b0f'));
+              },
+              child: const Text(
+                'DELETE',
               ),
             ),
           ],
