@@ -1,4 +1,4 @@
-package com.example.tudu_list
+package com.example.todoloo_list
 
 import io.flutter.embedding.android.FlutterActivity
 

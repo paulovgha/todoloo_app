@@ -12,19 +12,19 @@ class ToDoModel {
     required this.status,
   });
 
-  ToDoModel copyWith({
-    int? id,
-    String? title,
-    String? description,
-    bool? status,
-  }) {
-    return ToDoModel(
-      id: id ?? this.id,
-      title: title ?? this.title,
-      description: description ?? this.description,
-      status: status ?? this.status,
-    );
-  }
+  // ToDoModel copyWith({
+  //   int? id,
+  //   String? title,
+  //   String? description,
+  //   bool? status,
+  // }) {
+  //   return ToDoModel(
+  //     id: id ?? this.id,
+  //     title: title ?? this.title,
+  //     description: description ?? this.description,
+  //     status: status ?? this.status,
+  //   );
+  // }
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
@@ -54,21 +54,21 @@ class ToDoModel {
     return 'ToDoModel(id: $id, title: $title, description: $description, status: $status)';
   }
 
-  @override
-  bool operator ==(covariant ToDoModel other) {
-    if (identical(this, other)) return true;
+  // @override
+  // bool operator ==(covariant ToDoModel other) {
+  //   if (identical(this, other)) return true;
 
-    return other.id == id &&
-        other.title == title &&
-        other.description == description &&
-        other.status == status;
-  }
+  //   return other.id == id &&
+  //       other.title == title &&
+  //       other.description == description &&
+  //       other.status == status;
+  // }
 
-  @override
-  int get hashCode {
-    return id.hashCode ^
-        title.hashCode ^
-        description.hashCode ^
-        status.hashCode;
-  }
+  // @override
+  // int get hashCode {
+  //   return id.hashCode ^
+  //       title.hashCode ^
+  //       description.hashCode ^
+  //       status.hashCode;
+  // }
 }
